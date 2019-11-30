@@ -5,7 +5,7 @@ To generate sixels of a specific size for test, use gnuplot compiled with :
   --with-gd --with-bitmap-terminals
 
 You can then set the window size as part of GNUTERM parameters
- export GNUTERM="sixelgd size 1280,720 truecolor font arial 16"
+ export GNUTERM="sixelgd size 1280,720 truecolor font arial 10"
  echo plot sin(x) |gnuplot
 
 You can also run it as a oneliner
