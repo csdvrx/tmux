@@ -1,0 +1,14 @@
+You can test the sixel feature with the usual sixel test images, for example
+ zcat vimperator3.six.gz
+
+To generate sixels of a specific size for test, use gnuplot compiled with :
+  --with-gd --with-bitmap-terminals
+
+You can then set the window size as part of GNUTERM parameters
+ export GNUTERM="sixelgd size 1280,720 truecolor font arial 16"
+ echo plot sin(x) |gnuplot
+
+You can also run it as a oneliner
+ echo plot sin(x) | GNUTERM="sixelgd size 300,200 truecolor" gnuplot
+
+For quick tests, the attached gnuplot.sh script takes 2 parameters: x and y
